@@ -22,11 +22,11 @@ const UserSchema = new mongoose.Schema(
     },
     place: {
       type: String,
-      required: [true, "Please provide an city"],
+      // required: [true, "Please provide an city"],
     },
     date: {
       type: String,
-      required: [true, "Please provide a date"],
+      // required: [true, "Please provide a date"],
     },
   },
   { timestamps: true }
