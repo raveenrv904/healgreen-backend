@@ -1,6 +1,8 @@
 require("dotenv").config();
 require("express-async-errors");
 
+const cors  =require("cors");
+
 // express
 const express = require("express");
 const app = express();
@@ -15,6 +17,7 @@ const connectDB = require("./db/connect");
 // Routes
 const userRouter = require("./routes/UserRoute");
 
+app.use(cors());
 app.use(express.json());
 
 app.use("/api/v1/users", userRouter);
