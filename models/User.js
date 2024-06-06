@@ -24,9 +24,8 @@ const UserSchema = new mongoose.Schema(
       type: String,
       // required: [true, "Please provide an city"],
     },
-    date: {
+    message: {
       type: String,
-      // required: [true, "Please provide a date"],
     },
   },
   { timestamps: true }

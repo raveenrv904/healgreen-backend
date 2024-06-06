@@ -3,13 +3,13 @@ const { StatusCodes } = require("http-status-codes");
 const CustomError = require("../errors");
 
 const createUser = async (req, res) => {
-  const { name, email, phone, place, date } = req.body;
+  const { name, email, phone, place, message } = req.body;
   const emailAlreadyExists = await User.findOne({ email });
   if (emailAlreadyExists) {
     throw new CustomError.BadRequestError("Email Already Exists");
   }
 
-  const user = await User.create({ name, email, phone, place, date });
+  const user = await User.create({ name, email, phone, place, message });
   res.status(StatusCodes.OK).json({ user });
 };
 
