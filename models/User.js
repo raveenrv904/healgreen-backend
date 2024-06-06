@@ -16,10 +16,10 @@ const UserSchema = new mongoose.Schema(
       },
       unique: true,
     },
-    phone: {
-      type: String,
-      unique: true,
-    },
+    // phone: {
+    //   type: String,
+    //   unique: true,
+    // },
     place: {
       type: String,
       // required: [true, "Please provide an city"],
